@@ -1,32 +1,40 @@
 
-body, h1, p {
+body {
 	margin: 0;
+	font-size: 1.5em;
 }
 header {
-	background-color: #f1f1f1;
 	size: 15;
 	text-align: center;
 	font-size: 25px
 }
+/*
 body{
-	background-color: lightcyan;
+	background-image: url('wallpaper.jpeg')
 }
-	
-main {
-	background: red;	
+*/
+main {	
 	color: black;
 	margin-left: 25px;
-	width: 100%;	
+	display: block;
+	height: 100vh;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+	overflow: scroll;
 }
-		 
 nav {
+	background-color: aqua;
 	float: left;
-  display: block;
+	display: block;
+	margin: 0 auto;
   color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+	font-size: 17px;
+	position: absolute;
+	z-index: 1000;
+	width: 100%;
 }
 nav a {
 	padding: .5em .5em;/* Add some padding */
@@ -35,8 +43,57 @@ nav a {
 	text-align: right;
 	text-decoration: none;
 	margin: 0;
+	width: 5em;
 }		
 nav a:hover {
 	background-color: #ddd;
 	color: white;
 }	
+section {
+	padding: 1em 0.5em 0;
+	min-height: 100vh;
+	position: relative;
+	box-sizing: border-box;
+}
+section:nth-child(even) {
+background: #ddd;
+}
+h2 {
+	font-size: 2em;
+	margin-top: 0.25em;
+}
+p {
+	line-height: 1.5em;
+}
+p a {
+	text-decoration: unset;
+	color: blanchedalmond;
+}
+p a:hover {
+	color: aqua;
+	text-decoration: none;
+}
+.top {
+	width: 100%;
+	box-sizing: border-box;
+	text-align: right;
+	line-height: 1.75em;
+	padding-right: 0.5em;
+	position: absolute;
+	bottom: .5em;
+	background: #ddd;
+	text-decoration: none;
+	color: blanchedalmond;
+}
+.top:hover {
+	background: #ddd;
+	color: #ddd
+}
+@media screen and (min-width: 550px) {
+	section {
+		padding: 1em 2em 0;
+	}
+	h2 {
+		font-size: 3em;
+	}
+}
